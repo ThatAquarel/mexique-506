@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Religion</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Christianisme (Église Catholique)",
+            "Christianisme (Église Protestante)",
+            "Non affilié (inclut l'Athéisme)",
+            "Autres religions",
+          ],
+          datasets: [
+            {
+              label: "Pourcentage",
+              data: [78, 11.2, 10.6, 1],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Religions principales présentes",
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  let label = context.label;
+                  let value = context.formattedValue;
+
+                  if (label == "Autres religions") {
+                    return "Pourcentage de la population" + ": 0.002%";
+                  }
+
+                  if (!label) label = "Unknown";
+                  return "Pourcentage de la population" + ": " + value + "%";
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
