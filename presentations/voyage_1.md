@@ -12,13 +12,13 @@ transition: slide
 
 **Votre première destination, la ville de Mexico!**
 
-Capitale du Mexique, cette ville compte plus de 9 millions d’habitants. Il s’agit de la plus grande centrale hispanophone du monde.
+🌎 Capitale du Mexique, cette ville compte plus de 9 millions d’habitants. Il s’agit de la plus grande centrale hispanophone du monde.
 
 ---
 
 ![bg right](./voyage/mexico_city.webp)
 
-En effet, la population du pays est composée:
+📈 En effet, la population du pays est composée:
 - de **62%** Mestizo (Métis amérindien-Espagnol);
 - de **21%** majoritairement améridiens;
 - De **7%** amériediens;

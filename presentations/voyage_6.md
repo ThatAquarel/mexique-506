@@ -20,4 +20,4 @@ Malgré les coups de soleil et l’application abusive de la crème solaire, le 
 
 <!-- _class: lead -->
 
-# Retournons au Canada!
+# ✈️ Retournons au Canada ✈️

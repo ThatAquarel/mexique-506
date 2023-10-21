@@ -16,12 +16,12 @@ Un pays construit sur des montagnes avec un relief accidenté, <br>le Mexique ab
 
 ![bg right:70%](./voyage/chapala.jpg)
 
-Le lac **Chapala** est le plus grand lac **d’eau douce** au Mexique, comparable au Grands Lacs.
+🌊 Le lac **Chapala** est le plus grand lac **d’eau douce** au Mexique, comparable au Grands Lacs.
 
 ---
 
 ![bg left:70%](./voyage/copper_canyon.jpg)
 
-Les **Barrancas del cobre** sont une chaîne de montagnes entrecoupés par un total de **six canyons**.
+⛰️ Les **Barrancas del cobre** sont une chaîne de montagnes entrecoupés par un total de **six canyons**.
 
 Les alpinistes sont les bienvenus!
