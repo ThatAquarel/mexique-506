@@ -12,7 +12,7 @@ transition: slide
 
 ### Assez de faits pour l’instant! Continuons notre **exploration...**
 
-Comment pouvons-nous nous déplacer dans la ville <br> la plus densément peuplée en Amérique du Nord?
+Comment pouvons-nous nous déplacer dans une ville si densément peuplée?
 
 ---
 
