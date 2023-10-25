@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espérance de vie</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Canada", "Mexique"],
+          datasets: [
+            {
+              label: "Espérance de vie - population totale",
+              data: [83.99, 73.46],
+              backgroundColor: ["rgba(201, 203, 207, 0.2)"],
+              borderColor: ["rgb(201, 203, 207)"],
+              borderWidth: 2
+            },
+            {
+              label: "Femmes",
+              data: [86.39, 76.79],
+              backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+              borderColor: ["rgb(255, 99, 132)"],
+              borderWidth: 2
+            },
+            {
+              label: "Hommes",
+              data: [81.72, 70.29],
+              backgroundColor: ["rgba(54, 162, 235, 0.2)"],
+              borderColor: ["rgb(54, 162, 235)"],
+              borderWidth: 2
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  let label = context.label;
+                  let value = context.formattedValue;
+
+                  if (!label) label = "Unknown";
+
+                  return context.dataset.label + ": " + value + " ans";
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
