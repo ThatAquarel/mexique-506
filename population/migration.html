@@ -23,7 +23,7 @@
           datasets: [
             {
               label: "Solde migratoire",
-              data: [5.37, -0.77],
+              data: [249746, -50239],
               backgroundColor: [
                 "rgba(75, 192, 192, 0.2)",
                 "rgba(255, 99, 132, 0.2)",
@@ -46,7 +46,7 @@
               callbacks: {
                 label: function (context) {
                   let label = context.label;
-                  let value = context.formattedValue;
+                  let value = context.raw;
 
                   if (!label) label = "Unknown";
 
@@ -54,7 +54,7 @@
                     context.dataset.label +
                     ": " +
                     value +
-                    " pour 1000 habitants"
+                    " migrants"
                   );
                 },
               },
