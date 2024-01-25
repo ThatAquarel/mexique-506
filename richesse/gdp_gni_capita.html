@@ -52,7 +52,7 @@
               callbacks: {
                 label: function (context) {
                   let label = context.label;
-                  let value = context.formattedValue;
+                  let value = context.raw;
 
                   if (!label) label = "Unknown";
 
@@ -60,7 +60,7 @@
                     context.dataset.label +
                     ": " +
                     value +
-                    " $ US"
+                    " $US"
                   );
                 },
               },

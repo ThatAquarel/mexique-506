@@ -43,11 +43,11 @@
               callbacks: {
                 label: function (context) {
                   let label = context.label;
-                  let value = context.formattedValue;
+                  let value = context.raw;
 
                   if (!label) label = "Unknown";
 
-                  return context.dataset.label + ": " + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); + " $ US";
+                  return context.dataset.label + ": " + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " $US";
                 },
               },
             },
