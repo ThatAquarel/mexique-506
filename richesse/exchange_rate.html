@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taux de change (converti en $US)</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Canada", "Mexique"],
+          datasets: [
+            {
+              label: "Taux de change",
+              data: [0.743, 0.058],
+              backgroundColor: ["rgba(153, 102, 255, 0.2)"],
+              borderColor: ["rgb(153, 102, 255)"],
+              borderWidth: 2,
+              borderRadius: 5,
+              borderSkipped: false,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  let label = context.label;
+                  let value = context.formattedValue;
+
+                  if (!label) label = "Unknown";
+
+                  let conv = "";
+                  if (value === "0.743") {
+                    conv = " 1 CAD = ";
+                  } else {
+                    conv = " 1 MXN = ";
+                  }
+
+                  return context.dataset.label + ": " + conv + value + " $US";
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
