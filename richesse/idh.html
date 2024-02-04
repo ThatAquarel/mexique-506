@@ -47,7 +47,14 @@
 
                   if (!label) label = "Unknown";
 
-                  return context.dataset.label + ": " + value;
+                  let conv = "";
+                  if (value === "0.936") {
+                    conv = " (très élevé)";
+                  } else {
+                    conv = " (élevé)";
+                  }
+
+                  return context.dataset.label + ": " + value + conv;
                 },
               },
             },
